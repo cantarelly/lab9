@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<title>JSF 2 - Facelets</title>
+	<link rel="stylesheet" type="text/css"
+		href="#{facesContext.externalContext.requestContextPath}/lab4/style.css" />
+</h:head>
+
+<h:body>
+	<div id="header" class="border">
+		<h2>Topo da Página</h2>
+
+	</div>
+
+	<div class="content">
+
+		<div id="left" class="Col-left border">
+			<h2>Lado esquerdo</h2>
+			<ui:include src="menu-esquerdo.xhtml" />
+		</div>
+
+		<div id="center" class="Col-center border">
+			<h2>Conteúdo da página</h2>
+			<ui:insert name="conteudo"/>
+		</div>
+
+		<div id="right" class="Col-right border">
+			<h2>Lado direito</h2>
+		</div>
+
+	</div>
+
+	<div id="footer" class="border">
+		<h2>Rodapé</h2>
+	</div>
+
+</h:body>
+
+</html>

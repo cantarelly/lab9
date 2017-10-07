@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+
+<h:form>
+	<hr />
+	<h:panelGrid cellpadding="2">
+	Navegação Estática Implicita
+	<h:commandButton action="index" value="Ir Para Index" />
+		<h:commandButton action="pagina1" value="Ir Para Página 1" />
+	</h:panelGrid>
+	
+	<hr />
+
+	<h:panelGrid cellpadding="2">
+	Navegação Dinamica Implicita
+	<h:commandButton value="Ir Para Index" action="#{navegacaoBean.navegacaoDinamicaImplicitaIndex()}"/>
+	<h:commandButton value="Ir Para Página 1" action="#{navegacaoBean.navegacaoDinamicaImplicitaPagina1()}"/>
+	</h:panelGrid>
+	
+	<hr />
+	
+	<h:panelGrid cellpadding="2">
+	Navegação Estática Explicita
+	<h:commandButton action="NavegacaoExplicitaIndex" value="Ir Para Index" />
+	<h:commandButton action="NavegacaoExplicitaPagina1" value="Ir Para Página 1" />
+	</h:panelGrid>
+	
+	<hr />
+
+	<h:panelGrid cellpadding="2">
+	Navegação Dinamica Explicita
+	<h:commandButton value="Ir Para Index" action="#{navegacaoBean.navegacaoDinamicaExplicitaIndex()}"/>
+	<h:commandButton value="Ir Para Página 1" action="#{navegacaoBean.navegacaoDinamicaExplicitaPagina1()}"/>
+	</h:panelGrid>
+</h:form>
+
+</html>
